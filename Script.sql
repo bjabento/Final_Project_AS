@@ -80,7 +80,7 @@ go
 /*==============================================================*/
 create table ADMINISTRADOR (
    EMAIL                text                 not null,
-   ID_ADMIN             int                  not null,
+   ID_ADMIN             int    IDENTITY              not null,
    NOME                 text                 not null,
    APELIDO              text                 not null,
    COD_POSTAL           text                 not null,
@@ -97,7 +97,7 @@ go
 /* Table: SALA                                                  */
 /*==============================================================*/
 create table SALA (
-   ID_SALA              int                  not null,
+   ID_SALA              int IDENTITY                  not null,
    CAPACIDADE           int                  not null,
    ALOC_MAX             int                  not null,
    constraint PK_SALA primary key nonclustered (ID_SALA)
@@ -108,7 +108,7 @@ go
 /* Table: SLOT_HORARIO                                          */
 /*==============================================================*/
 create table SLOT_HORARIO (
-   ID_SLOT              int                  not null,
+   ID_SLOT              int IDENTITY              not null,
    HORA_SLOT            int                  not null,
    constraint PK_SLOT_HORARIO primary key nonclustered (ID_SLOT)
 )
@@ -119,7 +119,7 @@ go
 /*==============================================================*/
 create table DISPONIVEL (
    ID_SALA              int                  not null,
-   ID_SLOT              int                  not null,
+   ID_SLOT              int                 not null,
    constraint PK_DISPONIVEL primary key (ID_SALA, ID_SLOT),
    constraint FK_DISPONIV_DISPONIVE_SALA foreign key (ID_SALA)
       references SALA (ID_SALA),
@@ -133,8 +133,8 @@ go
 /*==============================================================*/
 create table GERE (
    EMAIL                text                 not null,
-   ID_ADMIN             int                  not null,
-   ID_SALA              int                  not null,
+   ID_ADMIN             int     not null,
+   ID_SALA              int                 not null,
    constraint PK_GERE primary key (EMAIL, ID_ADMIN, ID_SALA),
    constraint FK_GERE_GERE_ADMINIST foreign key (EMAIL, ID_ADMIN)
       references ADMINISTRADOR (EMAIL, ID_ADMIN),
@@ -148,7 +148,7 @@ go
 /*==============================================================*/
 create table REQUISITANTE (
    EMAIL                text                 not null,
-   ID_REQ               int                  not null,
+   ID_REQ               int      IDENTITY            not null,
    NOME                 text                 not null,
    APELIDO              text                 not null,
    COD_POSTAL           text                 not null,
@@ -165,7 +165,7 @@ go
 /* Table: RESERVA                                               */
 /*==============================================================*/
 create table RESERVA (
-   ID_RESERVA           int                  not null,
+   ID_RESERVA           int  IDENTITY                not null,
    ID_SLOT              int                  not null,
    EMAIL                text                 not null,
    ID_REQ               int                  not null,
