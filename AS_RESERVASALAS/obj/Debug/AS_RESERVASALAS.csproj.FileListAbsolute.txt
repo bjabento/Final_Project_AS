@@ -1,0 +1,13 @@
+C:\Users\bjabe\OneDrive\Ambiente de Trabalho\AS_RESERVASALAS\bin\Debug\AS_RESERVASALAS.exe.config
+C:\Users\bjabe\OneDrive\Ambiente de Trabalho\AS_RESERVASALAS\bin\Debug\AS_RESERVASALAS.exe
+C:\Users\bjabe\OneDrive\Ambiente de Trabalho\AS_RESERVASALAS\bin\Debug\AS_RESERVASALAS.pdb
+C:\Users\bjabe\OneDrive\Ambiente de Trabalho\AS_RESERVASALAS\obj\Debug\AS_RESERVASALAS.csproj.AssemblyReference.cache
+C:\Users\bjabe\OneDrive\Ambiente de Trabalho\AS_RESERVASALAS\obj\Debug\AS_RESERVASALAS.csproj.SuggestedBindingRedirects.cache
+C:\Users\bjabe\OneDrive\Ambiente de Trabalho\AS_RESERVASALAS\obj\Debug\AS_RESERVASALAS.Form1.resources
+C:\Users\bjabe\OneDrive\Ambiente de Trabalho\AS_RESERVASALAS\obj\Debug\AS_RESERVASALAS.FrmCriarSala.resources
+C:\Users\bjabe\OneDrive\Ambiente de Trabalho\AS_RESERVASALAS\obj\Debug\AS_RESERVASALAS.Properties.Resources.resources
+C:\Users\bjabe\OneDrive\Ambiente de Trabalho\AS_RESERVASALAS\obj\Debug\AS_RESERVASALAS.csproj.GenerateResource.cache
+C:\Users\bjabe\OneDrive\Ambiente de Trabalho\AS_RESERVASALAS\obj\Debug\AS_RESERVASALAS.csproj.CoreCompileInputs.cache
+C:\Users\bjabe\OneDrive\Ambiente de Trabalho\AS_RESERVASALAS\obj\Debug\AS_RESERVASALAS.exe
+C:\Users\bjabe\OneDrive\Ambiente de Trabalho\AS_RESERVASALAS\obj\Debug\AS_RESERVASALAS.pdb
+C:\Users\bjabe\OneDrive\Ambiente de Trabalho\AS_RESERVASALAS\obj\Debug\AS_RESERVASALAS.VerReservas.resources

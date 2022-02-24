@@ -3,12 +3,11 @@
 /* Created on:     21/02/2022 17:07:56                          */
 /*==============================================================*/
 
-
 if exists (select 1
             from  sysobjects
-           where  id = object_id('ADMINISTRADOR')
+           where  id = object_id('RESERVA')
             and   type = 'U')
-   drop table ADMINISTRADOR
+   drop table RESERVA
 go
 
 if exists (select 1
@@ -27,17 +26,18 @@ go
 
 if exists (select 1
             from  sysobjects
+           where  id = object_id('ADMINISTRADOR')
+            and   type = 'U')
+   drop table ADMINISTRADOR
+go
+
+if exists (select 1
+            from  sysobjects
            where  id = object_id('REQUISITANTE')
             and   type = 'U')
    drop table REQUISITANTE
 go
 
-if exists (select 1
-            from  sysobjects
-           where  id = object_id('RESERVA')
-            and   type = 'U')
-   drop table RESERVA
-go
 
 if exists (select 1
             from  sysobjects
@@ -60,11 +60,12 @@ if exists (select 1
    drop table UTILIZADOR
 go
 
+
 /*==============================================================*/
 /* Table: UTILIZADOR                                            */
 /*==============================================================*/
 create table UTILIZADOR (
-   EMAIL                text                 not null,
+   EMAIL                varchar(50)              not null,
    NOME                 text                 not null,
    APELIDO              text                 not null,
    COD_POSTAL           text                 not null,
@@ -79,8 +80,8 @@ go
 /* Table: ADMINISTRADOR                                         */
 /*==============================================================*/
 create table ADMINISTRADOR (
-   EMAIL                text                 not null,
-   ID_ADMIN             int    IDENTITY              not null,
+   EMAIL                varchar(50)                not null,
+   ID_ADMIN             int      IDENTITY           not null,
    NOME                 text                 not null,
    APELIDO              text                 not null,
    COD_POSTAL           text                 not null,
@@ -109,7 +110,7 @@ go
 /*==============================================================*/
 create table SLOT_HORARIO (
    ID_SLOT              int IDENTITY              not null,
-   HORA_SLOT            int                  not null,
+   HORA_SLOT            text                  not null,
    constraint PK_SLOT_HORARIO primary key nonclustered (ID_SLOT)
 )
 go
@@ -132,7 +133,7 @@ go
 /* Table: GERE                                                  */
 /*==============================================================*/
 create table GERE (
-   EMAIL                text                 not null,
+   EMAIL                varchar(50)                 not null,
    ID_ADMIN             int     not null,
    ID_SALA              int                 not null,
    constraint PK_GERE primary key (EMAIL, ID_ADMIN, ID_SALA),
@@ -147,8 +148,8 @@ go
 /* Table: REQUISITANTE                                          */
 /*==============================================================*/
 create table REQUISITANTE (
-   EMAIL                text                 not null,
-   ID_REQ               int      IDENTITY            not null,
+   EMAIL                varchar(50)              not null,
+   ID_REQ               int   IDENTITY               not null,
    NOME                 text                 not null,
    APELIDO              text                 not null,
    COD_POSTAL           text                 not null,
@@ -165,10 +166,10 @@ go
 /* Table: RESERVA                                               */
 /*==============================================================*/
 create table RESERVA (
-   ID_RESERVA           int  IDENTITY                not null,
+   ID_RESERVA           int     IDENTITY            not null,
    ID_SLOT              int                  not null,
-   EMAIL                text                 not null,
-   ID_REQ               int                  not null,
+   EMAIL                varchar(50)                not null,
+   ID_REQ               int                 not null,
    ID_SALA              int                  not null,
    DATA                 datetime             not null,
    DATA_RESERVA         datetime             not null,
